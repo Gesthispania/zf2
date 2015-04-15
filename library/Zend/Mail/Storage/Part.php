@@ -363,7 +363,7 @@ class Part implements RecursiveIterator, Part\PartInterface
      */
     public function __get($name)
     {
-        return $this->getHeader($name, 'string');
+        return ($this->getHeaders()) ? $this->getHeader($name, 'string') : null;
     }
 
     /**
